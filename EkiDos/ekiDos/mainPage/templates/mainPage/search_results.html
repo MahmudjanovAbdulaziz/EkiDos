@@ -1,0 +1,56 @@
+{% extends 'mainPage/base.html' %} {% block content %}
+<h1>Результаты поиска</h1>
+
+<p>Вы искали: "{{ query }}", категория: {% if search_select == 'dish' %} Блюда {% else %} Кафе {% endif %}
+</p>
+
+{% if results %}
+<div class="card--wrap">
+  {% for item in results %}
+              <div class="card--item" >
+              <div class="card--item-info">
+                <div class="card--item--prev">
+                  <img
+                    src="{{item.image.url}}"
+                    width="300px"
+                    height="200px"
+                    alt=""
+                  />
+                </div>
+                <div class="card--item--title">{{item.name}}</div>
+                <div class="card--item--description"></div>
+              </div>
+              <div class="card--item-action">
+                <div class="price">{{item.price}}<i> с</i></div>
+                <div class="count">
+                  <div class="count-button count-down"></div>
+                  <input type="number" min="1" step="1" value="1" />
+                  <div class="count-button count-up"></div>
+                </div>
+                <input
+                  type="hidden"
+                  class="url"
+                  value="/cart/add/1632?language=ru"
+                />
+                <input
+                  type="hidden"
+                  class="redirect"
+                  value="/ekidos?language=ru"
+                />
+                <button type="submit" class="status active bay_item">
+                  Заказать
+                </button>
+              </div>
+              </div>
+
+            <div class="card--item close--item"></div>
+            <div class="card--item close--item"></div>
+            <div class="card--item close--item"></div>
+              {% endfor %}
+</div>
+  
+
+
+{% else %}
+<p>По вашему запросу ничего не найдено.</p>
+{% endif %} {% endblock %}

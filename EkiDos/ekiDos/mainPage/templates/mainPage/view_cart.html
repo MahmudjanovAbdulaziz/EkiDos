@@ -1,0 +1,166 @@
+{% extends 'mainPage/base.html' %} {% load static %} {% block content %}
+<title>Корзина</title>
+
+{% if products_in_cart %}
+
+
+
+
+
+
+<section class="order--wrap">
+  <div class="order--check">
+
+
+    <div class="title check--title">
+     <b><p class="center">Ваш счёт</p></b>
+
+      <a href="{% url 'mainPage:index' %}"> добавить блюдо </a>
+    </div>
+    <div class="check-wrap" id="check-wrap">
+      <div class="check--item check--header">
+        <div class="name">Наименование</div>
+        <div class="price">Цена</div>
+        <div class="count">Кол-во</div>
+        <div class="sum">Итого</div>
+        <div class="cross"></div>
+      </div>
+
+
+
+        {% for product in products_in_cart %}
+
+        <div class="check--item order-dish-item" data-dish-id="7437">
+            <img class="check--item-prev" src="{{product.image.url}}" alt="" />
+            <div class="name">
+            <div class="name-wrap">
+                <div class="title"><b>{{product.name}}</b></div>
+                <div class="description"></div>
+            </div>
+            </div>
+            <div class="price">{{product.price}} &nbsp;с</div>
+            <div class="count-sum--wrap">
+            <div class="count">
+                <button type="button" class="count-button count-down">-</button>
+                <input type="number" min="1" step="1" value="1" />
+                <button type="button" class="count-button count-up">+</button>
+            </div>
+            <div class="sum"><span>{{product.price}}</span>&nbsp;&nbsp;с</div>
+            </div>
+            <div class="cross">
+                <a href="{% url 'mainPage:delete_product_in_cart' product.id %}">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 13 13"
+                    >
+                        <defs>
+                        <style>
+                            .cls-1 {
+                            fill-rule: evenodd;
+                            }
+                        </style>
+                        </defs>
+                        <path
+                        id="Shape_1_copy"
+                        d="M12.157 12.864l-5.657-5.657-5.657 5.657-.707-.707 5.657-5.657-5.657-5.657.707-.707 5.657 5.657 5.657-5.657.707.707-5.657 5.657 5.657 5.657z"
+                        ></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        {% endfor %}
+
+
+
+
+    </div>
+
+    <div class="sum-information">
+      <div class="sum-item">
+        <div class="sum-item--title"><b> Все блюда: </b></div>
+        <div id="dishes-garnishes-price--total" class="sum-item--count">
+          <span><b> {{total_price}}</b></span>&nbsp;с
+        </div>
+      </div>
+
+      <div class="sum-item">
+        <div class="sum-item--title"><b>Посуда:</b></div>
+        <div id="container-price" class="sum-item--count">
+          <span><b>0</b> </span>&nbsp;с
+        </div>
+      </div>
+
+      <div class="sum-item">
+        <div class="sum-item--title"><b>Доставка:</b></div>
+        <div id="dishes-delivery-price" class="sum-item--count">
+          <span><b>150</b></span>&nbsp;с
+        </div>
+      </div>
+
+
+      <div class="sum-item all-sum" style="margin-top: 45px">
+        <div class="sum-item--title"><b>Итого:</b></div>
+        <div id="price-total" class="sum-item--count">
+          <span><b>{{total_price_all}}</b></span>&nbsp;с
+        </div>
+      </div>
+
+
+      <div class="order--actions" style="display: block">
+          <button class="order--btn order--access" type="submit">
+            Оформить заказ
+          </button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+{% else %}
+<p>Ваша корзина пуста.</p>
+{% endif %}
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.order--access').on('click', function() {
+        var cartData = [];
+
+        $('.order-dish-item').each(function() {
+            var dishId = $(this).data('dish-id');
+            var count = $(this).find('.count input').val();
+            cartData.push({'dish_id': dishId, 'count': count});
+        });
+
+        $.ajax({
+            url: '/path/to/send_to_telegram/',
+            type: 'POST',
+            data: {'data': JSON.stringify(cartData)},
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    alert('Данные успешно отправлены в телеграм!');
+                } else {
+                    alert('Произошла ошибка при отправке данных.');
+                }
+            },
+            error: function() {
+                alert('Произошла ошибка при отправке данных.');
+            }
+        });
+    });
+});
+</script>
+
+
+
+
+
+{% endblock %}

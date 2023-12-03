@@ -1,0 +1,62 @@
+{% extends 'loginPage/base.html' %}
+{% load static %}
+
+	{% block content %}
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{% static 'images/img-01.png'%}" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" method="post" action="{% url 'loginPage:loginView' %}">
+					{% csrf_token %}
+					<span class="login100-form-title">
+						Войти в аккаунт
+					</span>
+					{% for f in form %}
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<!-- form.username  -->
+						{{f}}
+						<div class="input-errors">{{f.errors}}</div>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+					{% endfor %}
+
+					
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Забыли
+						</span>
+						<a class="txt2" href="#">
+							Имя пользователя / Пароль?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="{% url 'loginPage:registerUser' %}">
+							Создать аккаунт
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+
+				
+
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}	
+
+	

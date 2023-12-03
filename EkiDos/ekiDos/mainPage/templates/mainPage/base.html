@@ -1,0 +1,1115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7 notranslate"> <![endif]-->
+<!--[if IE 7]>         <html prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 notranslate"> <![endif]-->
+<!--[if IE 8]>         <html prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 notranslate"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html prefix="og: http://ogp.me/ns#" class="no-js notranslate">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="icon" type="image/x-icon" href="{% static '/images/oshfood_ico.ico' %}" />
+    <meta name="description" content="meta_description_dish_oshfood" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="google-site-verification" content="fl7w_XkV-G5H0Pp6HMCv3RPf_dLoE9nWmao8bhDCPqY" />
+    <meta property="og:title" content="Доставка из «Эки Дос» в городе Ош от Osh Food" />
+    <meta property="og:description" content="meta_description_dish_oshfood" />
+    <meta property="og:url" content="https://oshfood.kg/ekidos?language=ru" />
+    <meta property="og:image" content="https://oshfood.kg/image/200x200/6551.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/site_new_design_library.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/social-likes_birman.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}" />
+
+    <link rel="stylesheet" href="{% static 'css/site_new_design.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/site_new_design_styles.css'%}" />
+
+    <style type="text/css">
+        .comments .social .social-icons {
+            width: 120px;
+        }
+        
+        .footer-item-platform {
+            min-width: 234px;
+        }
+        
+        .footer-item-platform__image {
+            float: left;
+            width: 33px;
+            margin-right: 10px;
+        }
+        
+        .footer-item-platform p {
+            margin: 0;
+        }
+        
+        .footer-item-platform__content a {
+            text-decoration: underline;
+        }
+        
+        .footer .footer-item--copyright .footer-information {
+            margin-top: 5px !important;
+            font-size: 12px !important;
+            padding-left: 0;
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .logo {
+                margin-top: auto;
+            }
+        }
+        
+        @media screen and (max-width: 425px) {
+            .block_for_mobile_icon {
+                display: block !important;
+            }
+        }
+        
+        @media screen and (min-width: 830px) {
+            .home--top-banner .banner--holder {
+                background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images//tk/btn-food-bg.jpg?1681891347");
+            }
+            .home--top-banner .banner--text-holder {
+                height: 120px;
+                font-size: 32px;
+            }
+            .home--top-banner .banner--text-holder .banner--button {
+                font-size: 22px;
+            }
+        }
+        
+        @media screen and (max-width: 830px) {
+            .home--top-banner .banner--holder {
+                background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(/images//tk/bg-mob.jpg?1681891347);
+            }
+            .home--top-banner .banner--text-holder {
+                height: 90px;
+                font-size: 22px;
+            }
+            .home--top-banner .banner--text-holder button {
+                font-size: 16px;
+            }
+            .comments .social .social-icons {
+                width: 220px;
+                justify-content: inherit;
+            }
+        }
+        
+        .home--top-banner .banner--holder {
+            height: 248px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        
+        .home--top-banner .banner--text-holder {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            font-family: Montserrat-Regular, sans-serif;
+            font-weight: lighter;
+        }
+        
+        .home--top-banner .banner--text-holder .banner--button {
+            padding: 12px 30px;
+            font-family: Montserrat-Light, sans-serif;
+            font-weight: lighter;
+            background-color: #ff5a5f;
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 30px;
+        }
+        
+        .home--top-banner .banner--text-holder banner--button:hover {
+            background-color: #ff7680;
+        }
+        
+        .home--top-banner .banner--text-holder button:disabled,
+        .home--top-banner .banner--text-holder button[disabled] {
+            background: #ff5a5f !important;
+            opacity: 0.5;
+        }
+        
+        .food-footer .food-footer--wrap .food-footer--item {
+            max-width: 220px;
+        }
+        
+        .footer .footer-item--copyright .footer-information {
+            margin-top: 0;
+        }
+        
+        .footer .footer-item--copyright .footer-information,
+        .footer .footer-item--copyright {
+            font-size: 14px;
+        }
+        
+        .login--sign-modal form {
+            border-bottom: none;
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .footer .footer-item--copyright .footer-information {
+                padding: 0;
+            }
+        }
+        
+        @media screen and (min-width: 1024px) {
+            #phones-mobile-btn {
+                display: none;
+            }
+        }
+        
+        #phones-mobile-btn {
+            position: relative;
+            padding: 2px 8px 0;
+            min-width: 30px;
+        }
+        
+        .phones-mobile-btn svg {
+            margin-bottom: -2px;
+        }
+        
+        .phones-mobile--list {
+            border: 1px solid #dde0e7;
+            padding: 18px 20px 0;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background-color: #fff;
+            z-index: 11;
+            min-width: 193px;
+        }
+        
+        .phones-mobile--list .phones-mobile--list-top {
+            border-bottom: 1px solid #e4e4e4;
+            line-height: 1em;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .phones-mobile--list .phones-mobile--list-top .main-number svg,
+        .phones-mobile--list .phones-mobile--list-top .main-number span,
+        .phones-mobile--list .phones-mobile--list-top .btn {
+            vertical-align: middle;
+        }
+        
+        .phones-mobile--list .phones-mobile--list-top .btn {
+            margin-left: 20px;
+            margin-bottom: 3px;
+            color: #00a693;
+        }
+        
+        .phones-mobile--list .phones-mobile--list-top .phone-wrap--number {
+            margin-left: 10px;
+        }
+        
+        .phones-mobile--list .phones-mobile--list-top.long-phone {
+            text-align: center;
+        }
+        
+        .phones-mobile--list .phones-mobile--list-top.long-phone .btn {
+            margin-top: 15px;
+            margin-left: unset;
+        }
+        
+        .phones-mobile--list .another-phones--wrap {
+            padding: 0;
+        }
+        
+        .phones-mobile--list .phones-mobile--list-bottom {
+            border-top: 1px solid #e4e4e4;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            padding: 15px 0;
+        }
+        
+        .phones-mobile--list .phones-mobile--list-bottom span {
+            font-size: 15px;
+            margin-left: 10px;
+        }
+        
+        .phones-mobile--list-bottom img {
+            width: 25px;
+            height: 25px;
+        }
+        
+        .phones-mobile--list .phone-wrap--number {
+            font-family: Montserrat-Bold, sans-serif;
+            color: #2b2b3b;
+            font-size: 22px;
+        }
+        
+        .phones-mobile--list .another-phones--wrap {
+            border: none;
+        }
+        
+        .language img {
+            width: 25px;
+            height: 25px;
+        }
+        
+        @media screen and (min-width: 1200px) and (max-width: 1286px) {
+            .phones .info-wrap {
+                display: none;
+            }
+        }
+        
+        .catalog .banner img {
+            object-fit: cover;
+        }
+    </style>
+
+    <script src="{% static '/js/jquery-1.11.3.min.js'%}"></script>
+    <script type="text/javascript" src="{% static '/js/jquery.magnific-popup.min.js'%}"></script>
+</head>
+
+<body>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !(function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) :
+                    n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(
+            window,
+            document,
+            "script",
+            "https://connect.facebook.net/en_US/fbevents.js'%}"
+        );
+
+        fbq("init", "1524520034432469");
+        fbq("track", "PageView");
+    </script>
+    <noscript><img
+        alt="Facebook pixel"
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1524520034432469&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        (function(d, s, id) {
+            var js,
+                fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src =
+                "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1495480173939686";
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, "script", "facebook-jssdk");
+    </script>
+    <header>
+        <section class="header">
+            <button id="mobile-menu" class="mobile-menu">
+          <svg
+            width="21"
+            height="15"
+            viewBox="0 0 21 15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h21v1h-21v-1zm0 7h21v1h-21v-1zm0 7h21v1h-21v-1z"
+              fill="#04050A"
+            />
+          </svg>
+        </button>
+            <div class="block_for_mobile_icon" style="width: 58px; height: 15px; display: none; min-width: 30px"></div>
+            <a href="/?language=ru" class="logo">
+                <img src="{% static  '/images/logo.svg' %}" title="OshFood" />
+            </a>
+
+
+
+            <div class="search">
+                <form action="/search?language=ru" method="get">
+                    <input type="search" id="query" name="query" placeholder="Введите название блюда..." />
+                    
+                    <input type="hidden" name="language" value="ru" />
+                    <button type="submit">
+              <svg
+                width="16px"
+                height="16px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.909 15.479l-4.572-4.665c1.166-1.147 1.889-2.729 1.889-4.474 0-3.496-2.898-6.34-6.462-6.34-3.563 0-6.462 2.844-6.462 6.34s2.898 6.34 6.462 6.34c1.564 0 2.999-.549 4.118-1.459l4.583 4.677c.06.062.141.093.222.093.077 0 .154-.028.213-.084.122-.116.126-.307.009-.427zm-9.145-3.403c-3.224 0-5.846-2.573-5.846-5.736s2.622-5.736 5.846-5.736 5.846 2.573 5.846 5.736-2.623 5.736-5.846 5.736z"
+                  fill="#04050A"
+                  opacity=".635"
+                />
+              </svg>
+            </button>
+                </form>
+            </div>
+
+
+
+            <div class="phones">
+                <div class="phone-wrap">
+                    <div class="phone-wrap--title">Заказ по телефону</div>
+                    <a href="tel:1262" class="short-phone">
+                        <svg width="25px" height="25px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.5 0c-6.897 0-12.5 5.603-12.5 12.5s5.603 12.5 12.5 12.5 12.5-5.603 12.5-12.5-5.603-12.5-12.5-12.5zm3.999 18.75c-2.02-.065-4.377-2.056-6.002-3.714s-3.576-4.062-3.639-6.1c-.022-.689 1.693-1.968 1.71-1.98.382-.272.896-.22 1.105.075.137.193 1.447 2.22 1.59 2.45.142.227.119.569-.06.915-.104.201-.455.83-.607 1.103.162.239.615.854 1.572 1.831.963.982 1.562 1.441 1.795 1.605.268-.156.885-.514 1.083-.62.328-.177.669-.202.893-.063.235.147 2.217 1.491 2.402 1.623.145.104.239.283.257.492.019.213-.046.44-.181.637-.012.017-1.25 1.745-1.919 1.745z"
+                  fill="#00A699"
+                />
+              </svg> 1262
+                    </a>
+                </div>
+                <div class="info-wrap info-wrap">
+                    <div class="work-time">Время работы - Круг­ло­су­точ­но</div>
+
+                    <div class="phone-links" id="another-phones--btn">
+                        Другие номера
+                    </div>
+                    <div class="phone-links" id="recall--btn">Обратный звонок</div>
+
+                    <div class="another-phones" id="another-phones">
+                        <div class="another-phones--wrap">
+                            <div class="another-phones--item">
+                                <i>
+                    <object
+                      data="/new_design/static/img/icons/icon-megacom.svg?1681891347"
+                      type="image/svg+xml"
+                    ></object>
+                  </i>
+                                <div class="another-phones--item-wrap">
+                                    <div class="title">MegaCom</div>
+                                    <div class="description">
+                                        <a href="tel:+996990500028">0990&nbsp;500&nbsp;028</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="another-phones--item">
+                                <i>
+                    <object
+                      data="/new_design/static/img/icons/icon-beeline.svg?1681891347"
+                      type="image/svg+xml"
+                    ></object>
+                  </i>
+                                <div class="another-phones--item-wrap">
+                                    <div class="title">Beeline</div>
+                                    <div class="description">
+                                        <a href="tel:+996779500028">0779&nbsp;500&nbsp;028</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="another-phones--item">
+                                <i>
+                    <object
+                      data="/new_design/static/img/icons/icon-o.svg?1681891347"
+                      type="image/svg+xml"
+                    ></object>
+                  </i>
+                                <div class="another-phones--item-wrap">
+                                    <div class="title">O!</div>
+                                    <div class="description">
+                                        <a href="tel:+996705500028">0705 500 028</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recall" id="recall">
+                        <div class="recall-wrap">
+                            <form class="recall-form" action="/">
+                                <input class="recall-name" type="text" placeholder="Введите ваше имя" />
+                                <input class="recall-number" title="number" type="tel" placeholder="0 XXX YYYYYY" />
+                                <input class="recall-save" type="submit" value="Перезвоните мне" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/set_language/1?data=0" class="language">
+                <object data="/new_design/static/img/icons/icon-en.svg?1681891347" type="image/svg+xml"></object>
+                <span>English</span>
+            </a>
+
+            <div class="login">
+                <button class="btn" id="phones-mobile-btn">
+            <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 25 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 0c-6.897 0-12.5 5.603-12.5 12.5s5.603 12.5 12.5 12.5 12.5-5.603 12.5-12.5-5.603-12.5-12.5-12.5zm3.999 18.75c-2.02-.065-4.377-2.056-6.002-3.714s-3.576-4.062-3.639-6.1c-.022-.689 1.693-1.968 1.71-1.98.382-.272.896-.22 1.105.075.137.193 1.447 2.22 1.59 2.45.142.227.119.569-.06.915-.104.201-.455.83-.607 1.103.162.239.615.854 1.572 1.831.963.982 1.562 1.441 1.795 1.605.268-.156.885-.514 1.083-.62.328-.177.669-.202.893-.063.235.147 2.217 1.491 2.402 1.623.145.104.239.283.257.492.019.213-.046.44-.181.637-.012.017-1.25 1.745-1.919 1.745z"
+                fill="#00A699"
+              />
+            </svg>
+          </button>
+                <div class="phones-mobile--list" style="display: none">
+                    <div class="phones-mobile--list-top">
+                        <a href="tel:1262" class="main-number">
+                            <svg width="25px" height="25px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.5 0c-6.897 0-12.5 5.603-12.5 12.5s5.603 12.5 12.5 12.5 12.5-5.603 12.5-12.5-5.603-12.5-12.5-12.5zm3.999 18.75c-2.02-.065-4.377-2.056-6.002-3.714s-3.576-4.062-3.639-6.1c-.022-.689 1.693-1.968 1.71-1.98.382-.272.896-.22 1.105.075.137.193 1.447 2.22 1.59 2.45.142.227.119.569-.06.915-.104.201-.455.83-.607 1.103.162.239.615.854 1.572 1.831.963.982 1.562 1.441 1.795 1.605.268-.156.885-.514 1.083-.62.328-.177.669-.202.893-.063.235.147 2.217 1.491 2.402 1.623.145.104.239.283.257.492.019.213-.046.44-.181.637-.012.017-1.25 1.745-1.919 1.745z"
+                    fill="#00A699"
+                  />
+                </svg>
+                            <span class="phone-wrap--number"> 1262 </span>
+                        </a>
+                        <button class="btn mobile--recall">Обратный звонок</button>
+                    </div>
+                    <div class="another-phones--wrap">
+                        <div class="another-phones--item">
+                            <i>
+                  <object
+                    data="/new_design/static/img/icons/icon-megacom.svg?1681891347"
+                    type="image/svg+xml"
+                  ></object>
+                </i>
+                            <div class="another-phones--item-wrap">
+                                <div class="title">MegaCom</div>
+                                <div class="description">
+                                    <a href="tel:+996990500028">0990 500 028</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="another-phones--item">
+                            <i>
+                  <object
+                    data="/new_design/static/img/icons/icon-beeline.svg?1681891347"
+                    type="image/svg+xml"
+                  ></object>
+                </i>
+                            <div class="another-phones--item-wrap">
+                                <div class="title">Beeline</div>
+                                <div class="description">
+                                    <a href="tel:+996779500028">0779 500 028</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="another-phones--item">
+                            <i>
+                  <object
+                    data="/new_design/static/img/icons/icon-o.svg?1681891347"
+                    type="image/svg+xml"
+                  ></object>
+                </i>
+                            <div class="another-phones--item-wrap">
+                                <div class="title">O!</div>
+                                <div class="description">
+                                    <a href="tel:+996705500028">0705 500 028</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phones-mobile--list-bottom">
+                        <img src="{% static  '/images///tk/icn24_7.svg" alt="24/7" />
+                        <span> Работаем круглосуточно </span>
+                    </div>
+                </div>
+
+                <div id="cart" style="display: none">
+                    <a onClick="ga('send', 'pageview', '/basket')" href="/ekidos/make-order" class="basket tk-basket">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16.031">
+                <path
+                  id="basket_icon"
+                  d="M1275.61 18.984l-.03.01a.666.666 0 1 0 .76.657h1.55a1.073 1.073 0 0 1 .79.23 1.593 1.593 0 0 1 .4.751l2.66 10.779a2.545 2.545 0 0 0 .48 1.1 1.307 1.307 0 0 0 .44.323 1.326 1.326 0 1 0 2.34.845 1.277 1.277 0 0 0-.19-.668h2.05a1.277 1.277 0 0 0-.19.668 1.33 1.33 0 1 0 2.31-.887.34.34 0 0 0-.2-.428.319.319 0 0 0-.11-.02h-5.09a1.022 1.022 0 0 1-.87-.271 2.183 2.183 0 0 1-.32-.814v-.01l-.23-.908h6.11a.321.321 0 0 0 .31-.219l2.4-6.344a.332.332 0 0 0-.2-.428.278.278 0 0 0-.12-.021h-.81l-.01-.011-2.82-2.828a.334.334 0 0 0-.27-.1.351.351 0 0 0-.2.1l-1.09 1.106-1.1-1.106a.334.334 0 0 0-.27-.1.323.323 0 0 0-.2.1l-2.82 2.828-.01.011h-.63l-.71-2.849v-.024a2.179 2.179 0 0 0-.59-1.075 1.791 1.791 0 0 0-1.24-.4h-2.28zm8.52 2.212l.99.991a.329.329 0 0 0 .19.209l.04.01.9.918h-4.26zm2.66 0l2.13 2.129h-1.73l-.01-.011-1.25-1.252zm-6.19 2.8h9.59l-2.15 5.676h-6.04zm3.07 9.015a.668.668 0 1 1-.67.668.666.666 0 0 1 .67-.671zm4.33 0a.668.668 0 1 1-.67.668.666.666 0 0 1 .67-.671z"
+                  transform="translate(-1275 -18.969)"
+                />
+              </svg>
+                        <span>0 с</span>
+
+                        <span class="count">(0)</span>
+                    </a>
+                </div>
+                {% if user.is_authenticated %}
+
+                <button class="btn menu-link" type="button" id="login--button" onclick="profile()">
+            <!-- onclick="redirectToLogin" -->
+            <svg
+              class="profile--icon"
+              width="16px"
+              height="16px"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 0c-4.414 0-8 3.572-8 7.97 0 2.544 1.204 4.807 3.07 6.267l.28.209.08.06.12.08.26.169.06.04.11.07.21.11.34.179.36.159c1 .429 2.125.687 3.29.687.607 0 1.228-.123 1.82-.309 1.199-.308 2.287-.894 3.2-1.674l.1-.08.06-.05.02-.02.11-.11c1.544-1.454 2.51-3.508 2.51-5.788 0-4.398-3.586-7.97-8-7.97zm0 .638c4.069 0 7.36 3.279 7.36 7.333 0 2.012-.806 3.837-2.12 5.161-.623-.469-1.367-.723-2-.976-.693-.277-1.187-.551-1.34-.917-.034-.415-.032-.742-.03-1.136l.14-.13c.088-.12.172-.268.25-.428.136-.279.235-.614.29-.946.101-.052.207-.064.29-.169.154-.196.263-.475.31-.867.042-.349-.075-.579-.22-.757.156-.506.356-1.323.29-2.162-.036-.458-.154-.915-.43-1.295-.253-.348-.663-.603-1.18-.707-.336-.434-.942-.598-1.64-.598h-.01c-1.495.027-2.449.629-2.86 1.564-.391.89-.303 2.015-.02 3.178-.153.178-.273.417-.23.777.047.392.156.671.31.867.085.108.197.118.3.169.057.333.15.668.29.946.08.16.171.309.26.428l.14.13c.002.393.004.721-.03 1.136-.152.364-.647.63-1.34.907-.638.255-1.391.514-2.02.986-1.314-1.324-2.12-3.149-2.12-5.161 0-4.053 3.291-7.333 7.36-7.333zm-.03 2.042h.01c.644.002 1.061.191 1.18.399l.08.13.15.02c.445.062.7.24.88.488.18.248.28.594.31.976.06.765-.161 1.655-.3 2.072l-.08.249.22.13c-.014-.008.122.084.09.349-.038.313-.112.475-.17.548l-.09.07-.27.02-.03.259c-.03.276-.141.613-.27.877-.065.132-.131.248-.19.329l-.09.11-.17.09v.189c0 .462-.019.84.03 1.375v.04l.02.04c.264.707.991 1.014 1.72 1.305.598.239 1.201.493 1.7.827l-.3.239c-.316.214-.729.465-1.19.697-.449.226-.944.433-1.45.588l-.04.01c-.552.132-1.127.199-1.72.199-.701 0-1.378-.097-2.02-.279-1.028-.317-1.957-.833-2.67-1.455.503-.333 1.11-.587 1.71-.827.729-.291 1.457-.6 1.72-1.305l.01-.04.01-.04c.049-.534.03-.913.03-1.375v-.189l-.17-.09-.1-.11c-.06-.081-.134-.197-.2-.329-.133-.264-.241-.604-.27-.877l-.03-.259-.27-.02-.09-.07c-.058-.073-.132-.235-.17-.548-.032-.265.104-.357.09-.349l.21-.13-.06-.229c-.301-1.155-.353-2.206-.04-2.919.313-.711.949-1.159 2.28-1.186z"
+              />
+            </svg>
+            <i>{{user.username}}/</i>
+          </button>
+          
+<button class="btn menu-link" type="button" id="login--button" onclick="Logout()">
+            <!-- onclick="redirectToLogin" -->
+            
+              <path
+                d="M8 0c-4.414 0-8 3.572-8 7.97 0 2.544 1.204 4.807 3.07 6.267l.28.209.08.06.12.08.26.169.06.04.11.07.21.11.34.179.36.159c1 .429 2.125.687 3.29.687.607 0 1.228-.123 1.82-.309 1.199-.308 2.287-.894 3.2-1.674l.1-.08.06-.05.02-.02.11-.11c1.544-1.454 2.51-3.508 2.51-5.788 0-4.398-3.586-7.97-8-7.97zm0 .638c4.069 0 7.36 3.279 7.36 7.333 0 2.012-.806 3.837-2.12 5.161-.623-.469-1.367-.723-2-.976-.693-.277-1.187-.551-1.34-.917-.034-.415-.032-.742-.03-1.136l.14-.13c.088-.12.172-.268.25-.428.136-.279.235-.614.29-.946.101-.052.207-.064.29-.169.154-.196.263-.475.31-.867.042-.349-.075-.579-.22-.757.156-.506.356-1.323.29-2.162-.036-.458-.154-.915-.43-1.295-.253-.348-.663-.603-1.18-.707-.336-.434-.942-.598-1.64-.598h-.01c-1.495.027-2.449.629-2.86 1.564-.391.89-.303 2.015-.02 3.178-.153.178-.273.417-.23.777.047.392.156.671.31.867.085.108.197.118.3.169.057.333.15.668.29.946.08.16.171.309.26.428l.14.13c.002.393.004.721-.03 1.136-.152.364-.647.63-1.34.907-.638.255-1.391.514-2.02.986-1.314-1.324-2.12-3.149-2.12-5.161 0-4.053 3.291-7.333 7.36-7.333zm-.03 2.042h.01c.644.002 1.061.191 1.18.399l.08.13.15.02c.445.062.7.24.88.488.18.248.28.594.31.976.06.765-.161 1.655-.3 2.072l-.08.249.22.13c-.014-.008.122.084.09.349-.038.313-.112.475-.17.548l-.09.07-.27.02-.03.259c-.03.276-.141.613-.27.877-.065.132-.131.248-.19.329l-.09.11-.17.09v.189c0 .462-.019.84.03 1.375v.04l.02.04c.264.707.991 1.014 1.72 1.305.598.239 1.201.493 1.7.827l-.3.239c-.316.214-.729.465-1.19.697-.449.226-.944.433-1.45.588l-.04.01c-.552.132-1.127.199-1.72.199-.701 0-1.378-.097-2.02-.279-1.028-.317-1.957-.833-2.67-1.455.503-.333 1.11-.587 1.71-.827.729-.291 1.457-.6 1.72-1.305l.01-.04.01-.04c.049-.534.03-.913.03-1.375v-.189l-.17-.09-.1-.11c-.06-.081-.134-.197-.2-.329-.133-.264-.241-.604-.27-.877l-.03-.259-.27-.02-.09-.07c-.058-.073-.132-.235-.17-.548-.032-.265.104-.357.09-.349l.21-.13-.06-.229c-.301-1.155-.353-2.206-.04-2.919.313-.711.949-1.159 2.28-1.186z"
+              />
+            </svg>
+            <i>Logout</i>
+          </button> 
+
+          {% else %}
+                <button class="btn menu-link" type="button" id="login--button" onclick="redirectToLogin()">
+            <!-- onclick="redirectToLogin" -->
+            <svg
+              class="profile--icon"
+              width="16px"
+              height="16px"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 0c-4.414 0-8 3.572-8 7.97 0 2.544 1.204 4.807 3.07 6.267l.28.209.08.06.12.08.26.169.06.04.11.07.21.11.34.179.36.159c1 .429 2.125.687 3.29.687.607 0 1.228-.123 1.82-.309 1.199-.308 2.287-.894 3.2-1.674l.1-.08.06-.05.02-.02.11-.11c1.544-1.454 2.51-3.508 2.51-5.788 0-4.398-3.586-7.97-8-7.97zm0 .638c4.069 0 7.36 3.279 7.36 7.333 0 2.012-.806 3.837-2.12 5.161-.623-.469-1.367-.723-2-.976-.693-.277-1.187-.551-1.34-.917-.034-.415-.032-.742-.03-1.136l.14-.13c.088-.12.172-.268.25-.428.136-.279.235-.614.29-.946.101-.052.207-.064.29-.169.154-.196.263-.475.31-.867.042-.349-.075-.579-.22-.757.156-.506.356-1.323.29-2.162-.036-.458-.154-.915-.43-1.295-.253-.348-.663-.603-1.18-.707-.336-.434-.942-.598-1.64-.598h-.01c-1.495.027-2.449.629-2.86 1.564-.391.89-.303 2.015-.02 3.178-.153.178-.273.417-.23.777.047.392.156.671.31.867.085.108.197.118.3.169.057.333.15.668.29.946.08.16.171.309.26.428l.14.13c.002.393.004.721-.03 1.136-.152.364-.647.63-1.34.907-.638.255-1.391.514-2.02.986-1.314-1.324-2.12-3.149-2.12-5.161 0-4.053 3.291-7.333 7.36-7.333zm-.03 2.042h.01c.644.002 1.061.191 1.18.399l.08.13.15.02c.445.062.7.24.88.488.18.248.28.594.31.976.06.765-.161 1.655-.3 2.072l-.08.249.22.13c-.014-.008.122.084.09.349-.038.313-.112.475-.17.548l-.09.07-.27.02-.03.259c-.03.276-.141.613-.27.877-.065.132-.131.248-.19.329l-.09.11-.17.09v.189c0 .462-.019.84.03 1.375v.04l.02.04c.264.707.991 1.014 1.72 1.305.598.239 1.201.493 1.7.827l-.3.239c-.316.214-.729.465-1.19.697-.449.226-.944.433-1.45.588l-.04.01c-.552.132-1.127.199-1.72.199-.701 0-1.378-.097-2.02-.279-1.028-.317-1.957-.833-2.67-1.455.503-.333 1.11-.587 1.71-.827.729-.291 1.457-.6 1.72-1.305l.01-.04.01-.04c.049-.534.03-.913.03-1.375v-.189l-.17-.09-.1-.11c-.06-.081-.134-.197-.2-.329-.133-.264-.241-.604-.27-.877l-.03-.259-.27-.02-.09-.07c-.058-.073-.132-.235-.17-.548-.032-.265.104-.357.09-.349l.21-.13-.06-.229c-.301-1.155-.353-2.206-.04-2.919.313-.711.949-1.159 2.28-1.186z"
+              />
+            </svg>
+            <i>Войти</i>
+          </button> {% endif %}
+
+                <div class="menu-profile--list">
+                    <a href="/set_language/1?data=0" class="language">
+                        <object data="/new_design/static/img/icons/icon-en.svg?1681891347" type="image/svg+xml"></object>
+                        <span>EN</span>
+                    </a>
+                    <a id="login--button-menu-item" class="exit" href="#">Войти</a>
+                </div>
+            </div>
+            <div class="mfp-hide login--sign-modal modal" id="login--modal">
+                <div class="modal--content--wrap" id="login-tabs">
+                    <ul class="login-tabs">
+                        <li class="login-tab"><a href="#login">Войти</a></li>
+                        <li class="sign-tab">
+                            <a href="#registration">Зарегистрироваться</a>
+                        </li>
+                    </ul>
+                    <div class="login--wrap login--sing-modal--form" id="login">
+                        <form action="" method="post" class="form-login">
+                            <div class="form--item">
+                                <label for="login-email">Ваша электронная почта:</label>
+                                <input id="username" name="_username" value="" type="email" required placeholder="Укажите вашу электронную почту" />
+                            </div>
+                            <div class="form--item">
+                                <label for="login-password">Пароль:</label>
+                                <input id="password" name="_password" type="password" required placeholder="Укажите пароль" />
+                            </div>
+                            <div class="checkbox-wrap">
+                                <div class="form--item">
+                                    <input id="remember--me" type="checkbox" name="_remember_me" value="on" />
+
+                                    <label for="remember--me">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384.97 384.97"
+                        width="16px"
+                        height="16px"
+                      >
+                        <path
+                          fill="#888"
+                          d="M360.91,0H24.06A24.05,24.05,0,0,0,0,24.06V360.91A24.05,24.05,0,0,0,24.06,385H360.91A24.06,24.06,0,0,0,385,360.91V24.06A24.06,24.06,0,0,0,360.91,0Zm0,360.91H24.06V24.06H360.91Z"
+                        />
+                        <path
+                          class="checkbox--arrow"
+                          fill="#00a699"
+                          d="M135.61,286.81a15.85,15.85,0,0,0,21.88,0L325.91,119.92a15.21,15.21,0,0,0,0-21.65,15.55,15.55,0,0,0-21.87,0L146.49,254.36,80.93,190.11a15.55,15.55,0,0,0-21.87,0,15.19,15.19,0,0,0,0,21.65Z"
+                        />
+                      </svg>
+                      Запомнить меня
+                    </label>
+                                </div>
+                                <a href="/resetting/request?language=ru">Забыли пароль?</a>
+                            </div>
+                            <button type="submit" id="_submit" name="_submit">Войти</button>
+                        </form>
+                    </div>
+                    <div class="registration--wrap login--sing-modal--form" id="registration">
+                        <form id="register_form" action="/register/?language=ru" method="post" class="form-login">
+                            <input type="hidden" id="sda_user_registration_form__token" name="sda_user_registration_form[_token]" value="2df596cb78a40855d1a58ad1e37ef75c0e354b42" />
+                            <div class="form--item">
+                                <label for="sign-email">Ваша электронная почта:</label>
+                                <input id="sda_user_registration_form_email" type="email" required="required" name="sda_user_registration_form[email]" placeholder="Укажите вашу электронную почту" />
+                            </div>
+                            <div class="form--item">
+                                <label for="sign-name">Имя:</label>
+                                <input id="sda_user_registration_form_firstname" type="text" placeholder="Укажите ваше имя" required name="sda_user_registration_form[firstname]" maxlength="64" />
+                            </div>
+                            <div class="form--item">
+                                <label for="sign-surname">Фамилия:</label>
+                                <input id="sda_user_registration_form_lastname" type="text" placeholder="Укажите вашу фамилию" maxlength="64" name="sda_user_registration_form[lastname]" />
+                            </div>
+                            <div class="form--item">
+                                <label for="sign-phone">Телефон:</label>
+                                <input id="sda_user_registration_form_phone" class="recall-number" title="number" type="tel" placeholder="0 XXX YYYYYY" required name="sda_user_registration_form[phone]" />
+                            </div>
+                            <div class="form--item">
+                                <label for="sign-password">Пароль:</label>
+                                <input id="sda_user_registration_form_plainPassword_first" type="password" placeholder="Укажите пароль" required name="sda_user_registration_form[plainPassword][first]" />
+                            </div>
+                            <div class="form--item">
+                                <input id="sda_user_registration_form_plainPassword_second" type="password" placeholder="Повторите пароль" required name="sda_user_registration_form[plainPassword][second]" />
+                            </div>
+                            <div class="checkbox-wrap">
+                                <div class="form--item">
+                                    <input type="checkbox" id="access-offer" name="sda_user_registration_form[agree]" value="1" />
+                                    <label for="access-offer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384.97 384.97"
+                        width="16px"
+                        height="16px"
+                      >
+                        <path
+                          fill="#888"
+                          d="M360.91,0H24.06A24.05,24.05,0,0,0,0,24.06V360.91A24.05,24.05,0,0,0,24.06,385H360.91A24.06,24.06,0,0,0,385,360.91V24.06A24.06,24.06,0,0,0,360.91,0Zm0,360.91H24.06V24.06H360.91Z"
+                        />
+                        <path
+                          class="checkbox--arrow"
+                          fill="#00a699"
+                          d="M135.61,286.81a15.85,15.85,0,0,0,21.88,0L325.91,119.92a15.21,15.21,0,0,0,0-21.65,15.55,15.55,0,0,0-21.87,0L146.49,254.36,80.93,190.11a15.55,15.55,0,0,0-21.87,0,15.19,15.19,0,0,0,0,21.65Z"
+                        />
+                      </svg>
+                      Я согласен с условиями
+                      <a href="/agreement.html?language=ru">
+                        Пользовательского соглашения
+                      </a>
+                    </label>
+                                </div>
+                            </div>
+                            <button id="_register-submit" name="_submit" type="submit">
+                  Зарегистрироваться
+                </button>
+                        </form>
+                    </div>
+                    <a class="fb-login" href="/fb/login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21.97" height="22" viewBox="0 0 21.97 22">
+                <path
+                  fill="#3b5998"
+                  d="M2075.83 850h-13.19a4.409 4.409 0 0 0-4.4 4.4v13.2a4.409 4.409 0 0 0 4.4 4.4h13.19a4.409 4.409 0 0 0 4.4-4.4v-13.2a4.409 4.409 0 0 0-4.4-4.4zm-.44 7.48h-1.32c-.94 0-1.32.222-1.32.88v1.32h2.64l-.44 2.64h-2.2v8.8h-3.07v-8.8h-1.32v-2.64h1.32v-1.32c0-2.058.69-3.52 3.07-3.52a9.977 9.977 0 0 1 2.64.44v2.2z"
+                  transform="translate(-2058.25 -850)"
+                />
+              </svg> Вход через Facebook
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="mfp-hide edit-person--modal modal" id="mobile--recall">
+            <div class="modal--content--wrap">
+                <div class="title">Обратный звонок</div>
+                <div class="description">
+                    Оставьте ваши контактные данные, и наши операторы свяжутся с вами в ближайшее время.
+                </div>
+                <form action="">
+                    <div class="form--item">
+                        <label for="recall-name"> Ваше имя: </label>
+                        <input class="recall-name-modal" id="recall-name-modal" type="text" placeholder="Введите ваше имя" />
+                    </div>
+                    <div class="form--item">
+                        <label for="recall-number"> Телефон: </label>
+                        <input class="recall-number-modal" id="recall-number-modal" title="number" type="text" placeholder="0 XXX YYYYYY" />
+                    </div>
+                    <div class="order--actions">
+                        <button class="order--btn order--access recall-save-modal" type="submit">
+                Перезвоните мне
+              </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <style>
+            .phones .tk-info-wrap {
+                min-width: 150px;
+                font-size: 11px;
+            }
+            
+            .login .tk-basket span {
+                font-size: 14px;
+            }
+            
+            @media screen and (max-width: 1020px) {
+                .phones-mobile--list .phones-mobile--list-top.long-phone {
+                    width: 240px;
+                }
+            }
+            
+            @media screen and (max-width: 1360px) {
+                .phones .phone-wrap .phone {
+                    font-size: 20px;
+                }
+            }
+            
+            @media only screen and (min-width: 1800px) {
+                .header {
+                    border-bottom: 1px solid #dde3e6;
+                }
+            }
+        </style>
+
+        <script type="text/javascript" src="{% static '/js/nouislider.min.js'%}"></script>
+        <script>
+            $(".recall-save, .recall-save-modal").click(function(evt) {
+                evt.preventDefault();
+
+                var TRANSLATIONS = {
+                    feedback_call_disabled: "Обратный звонок возможен в рабочее время",
+                    feel_fields: "Заполните поля",
+                    sent: "Отправлено. Вам позвонит первый освободившийся специалист.",
+                    error: "Возникла ошибка, попробуйте позже.",
+                    phone_validation_error: "Укажите правильный номер телефона в формате 0 XXX YYYYYY",
+                };
+
+                var name = $(".recall-name");
+                var phone = $(".recall-number");
+
+                if ($(this).hasClass("recall-save-modal")) {
+                    name = $(".recall-name-modal");
+                    phone = $(".recall-number-modal");
+                }
+                var replaced_number = phone.val().replace(/[^+0-9]/g, "");
+
+                if (name.val().trim().length == 0 || phone.val().trim().length == 0) {
+                    name.css("border", "1px solid red");
+                    phone.css("border", "1px solid red");
+                    notie.alert(3, TRANSLATIONS.feel_fields, 3);
+                } else if (replaced_number.trim().length != "10") {
+                    phone.css("border", "1px solid red");
+                    notie.alert(3, TRANSLATIONS.phone_validation_error, 3);
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "/order/guest/add_phone_main",
+                        data: {
+                            name: name.val(),
+                            phone: phone.val()
+                        },
+                        success: function(data) {
+                            if (data.success) {
+                                notie.alert(1, TRANSLATIONS.sent, 3);
+                                $("#recall").hide();
+                                $.magnificPopup.close();
+                                name.val("");
+                                phone.val("");
+                            } else {
+                                notie.alert(3, TRANSLATIONS.error, 3);
+                            }
+                        },
+                    });
+                }
+            });
+        </script>
+
+        <script>
+            $("#_submit").click(function(e) {
+                e.preventDefault();
+                var email = $("#username").val();
+                var password = $("#password").val();
+
+                if (email.length == 0 || password.length == 0) {
+                    notie.alert(3, "Заполните поля", 5);
+                    return false;
+                }
+
+                $.ajax({
+                    type: $("form.form-login").attr("method"),
+                    url: "/user/login_check",
+                    data: $("form").serialize(),
+                    dataType: "json",
+                    success: function(data, status, object) {
+                        if (data.success) {
+                            window.location.reload();
+                        } else {
+                            notie.alert(3, "Неправильное имя пользователя или пароль !", 5);
+                        }
+                    },
+                    error: function(data, status, object) {
+                        console.log(data.message);
+                    },
+                });
+            });
+
+            $("#_register-submit").click(function(e) {
+                e.preventDefault();
+                var form = $("#register_form");
+                var email = $("#sda_user_registration_form_email").val();
+                var firstname = $("#sda_user_registration_form_firstname").val();
+                var lastname = $("#sda_user_registration_form_lastname").val();
+                var phone = $("#sda_user_registration_form_phone").val();
+                var password_first = $(
+                    "#sda_user_registration_form_plainPassword_first"
+                ).val();
+                var password_second = $(
+                    "#sda_user_registration_form_plainPassword_second"
+                ).val();
+
+                if (
+                    email.length == 0 ||
+                    firstname.length == 0 ||
+                    lastname.length == 0 ||
+                    phone.length == 0 ||
+                    password_first.length == 0 ||
+                    password_second.length == 0
+                ) {
+                    notie.alert(3, "Заполните поля", 5);
+                    return false;
+                }
+                if (!$("#access-offer").is(":checked")) {
+                    notie.alert(
+                        3,
+                        "Вы должны согласиться c пользовательским соглашением и политикой конфиденциальности",
+                        5
+                    );
+                    return false;
+                }
+                if (password_first !== password_second) {
+                    notie.alert(3, "Введенные пароли не совпадают", 5);
+                    return false;
+                }
+                form.submit();
+            });
+
+            $("#phones-mobile-btn").click(function() {
+                $(".phones-mobile--list").slideToggle("slow");
+            });
+        </script>
+        <section class="menu">
+            <ul class="nav">
+                <li>
+                    <a class="menu-link" href="{% url 'mainPage:index' %}">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.81.001l-.04.01c-.149.033-.254.167-.25.32v4.476c-.002.115.059.223.159.281.1.058.223.058.323 0s.16-.165.159-.281v-4.476c.003-.092-.033-.181-.1-.244s-.158-.094-.25-.086zm1.92 0l-.04.01c-.149.033-.254.167-.25.32v4.476c-.002.115.059.223.159.281.1.058.223.058.323 0s.16-.165.159-.281v-4.476c.003-.092-.033-.181-.1-.244s-.158-.094-.25-.086zm1.92 0l-.04.01c-.149.033-.254.167-.25.32v5.754c0 .887-.712 1.598-1.6 1.598-.177 0-.32.143-.32.32v7.672c-.002.115.059.223.159.281.1.058.223.058.323 0s.16-.165.159-.281v-7.423c1.076-.162 1.92-1.049 1.92-2.168v-5.754c.003-.092-.033-.181-.1-.244s-.158-.094-.25-.086zm-15.39.01c-.153.029-.263.164-.26.32v5.435c0 2.373 1.641 4.34 3.84 4.915v3.077c0 .563-.184.918-.54 1.179-.356.261-.922.42-1.7.42-.115-.002-.223.059-.281.159-.058.1-.058.223 0 .322.058.1.166.16.281.159.861 0 1.565-.161 2.08-.539.515-.378.8-.982.8-1.698v-3.297c-.002-.152-.111-.281-.26-.31-2.044-.415-3.58-2.217-3.58-4.386v-5.115h8.96v5.115c0 2.169-1.536 3.971-3.58 4.386-.149.028-.258.158-.26.31v3.297c0 .716.285 1.32.8 1.698.515.378 1.219.539 2.08.539.115.002.223-.059.281-.159.058-.1.058-.223 0-.322-.058-.1-.166-.16-.281-.159-.778 0-1.344-.158-1.7-.42-.356-.261-.54-.616-.54-1.179v-3.077c2.199-.575 3.84-2.542 3.84-4.915v-5.435c0-.177-.143-.32-.32-.32h-9.66z"
+                />
+              </svg> Еда
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="{% url 'mainPage:view_cart' %}">
+                        <span class="menu-link">Корзина</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="/contacts.html?language=ru">
+                        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 20 21">
+                <path
+                  d="M10.13,20.13a10,10,0,1,1,10-10A10,10,0,0,1,10.13,20.13Zm0-19.39a9.4,9.4,0,1,0,9.4,9.39A9.4,9.4,0,0,0,10.13.74Z"
+                />
+                <path
+                  d="M10.13,20.13a10,10,0,0,1-5.79-1.85A.3.3,0,0,1,4.22,18a.28.28,0,0,1,.19-.24c2.52-.93,2.92-1.69,2.92-3.14a1,1,0,0,0-.24-.73,4,4,0,0,1-.68-1.78c0-.16-.06-.17-.19-.24-.37-.17-.71-.43-.8-1.59a1.39,1.39,0,0,1,.36-1c0-.2-.1-.55-.15-.92-.27-1.69-.29-3.75,2.08-4.71,2.06-.83,3.71-.38,4.23.17a2.71,2.71,0,0,1,2,.87c1,1.18.69,3.86.58,4.58a1.38,1.38,0,0,1,.36,1c-.09,1.18-.43,1.44-.79,1.61-.14.07-.17.08-.19.24a4,4,0,0,1-.69,1.78,1,1,0,0,0-.24.73c0,1.45.41,2.21,2.92,3.14A.28.28,0,0,1,16,18a.3.3,0,0,1-.12.29A10,10,0,0,1,10.13,20.13Zm-5-2a9.32,9.32,0,0,0,9.92,0c-2.1-.86-2.77-1.73-2.77-3.49a1.59,1.59,0,0,1,.35-1.07A3.46,3.46,0,0,0,13.26,12a.81.81,0,0,1,.52-.67c.19-.09.39-.19.46-1.09,0-.47-.21-.59-.22-.6a.31.31,0,0,1-.16-.32C14,8.5,14.26,6,13.45,5a2.13,2.13,0,0,0-1.6-.65h-.08a.47.47,0,0,1-.25-.16c-.16-.28-1.6-.85-3.58,0S6,6.67,6.23,8.22c.08.58.17,1.08.18,1.09a.32.32,0,0,1-.18.33h0s-.2.12-.2.61c.07.88.26,1,.45,1.07A.81.81,0,0,1,7,12a3.47,3.47,0,0,0,.59,1.54,1.64,1.64,0,0,1,.35,1.08C7.94,16.37,7.28,17.24,5.17,18.1Z"
+                />
+              </svg> Контакты
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="/delivery.html?language=ru">
+                        <svg style="width: 30px; height: 30px" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 16">
+                <path
+                  d="M24.12,18.08a2.68,2.68,0,0,1-2.68-2.68v-.2l-.2,0H10.81v.2a2.68,2.68,0,1,1-5.35,0v-.2l-.2,0H2.81a.74.74,0,0,1-.74-.74v-1.2H.39A.26.26,0,0,1,.13,13a.26.26,0,0,1,.26-.26H4.74A.26.26,0,0,1,5,13a.26.26,0,0,1-.26.25H2.58v1.4l.23,0H5.56l.05-.13a2.67,2.67,0,0,1,5.05,0l.05.13h9.76V11a.26.26,0,0,1,.26-.25A.25.25,0,0,1,21,11v3.62h.56l.05-.13a2.67,2.67,0,0,1,5.06,0l0,.13h1.53v-2.4h-.71A1.22,1.22,0,0,1,26.29,11v-1a.25.25,0,0,1,.25-.25h1.69l-.09-.26a1.67,1.67,0,0,0-1.6-1.17H21V9.1a.26.26,0,0,1-.25.26.26.26,0,0,1-.26-.26V.67l-.23,0H2.61l0,.23V9.1a.26.26,0,0,1-.26.26.26.26,0,0,1-.25-.26V.87A.74.74,0,0,1,2.81.13H20.24A.74.74,0,0,1,21,.87v1.2H24.6a1.71,1.71,0,0,1,1.71,1.71v.48a.26.26,0,0,1-.2.25l-.2,0,.83,3.34.13,0a2.2,2.2,0,0,1,1.86,2.16v4.85a.25.25,0,0,1-.25.25H26.79v.2A2.68,2.68,0,0,1,24.12,18.08Zm0-4.85a2.17,2.17,0,1,0,2.17,2.17A2.17,2.17,0,0,0,24.12,13.23Zm-16,0A2.17,2.17,0,1,0,10.3,15.4,2.17,2.17,0,0,0,8.13,13.23ZM26.79,11a.72.72,0,0,0,.72.72h.71V10.33H26.79ZM21,7.88h5.23l-.84-3.37H21ZM21,4H25.8v-.2a1.2,1.2,0,0,0-1.2-1.23H21Z"
+                />
+                <path
+                  d="M12.91,12.55a.23.23,0,0,1-.23-.23.23.23,0,0,1,.23-.23h6.42a.24.24,0,0,1,.23.23.23.23,0,0,1-.23.23Z"
+                />
+                <path
+                  d="M2.82,10.72a.23.23,0,0,1,0-.46h5.5a.23.23,0,0,1,0,.46Z"
+                />
+              </svg> доставка
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="/about_us.html?language=ru">
+                        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 19 21">
+                <path
+                  d="M9.63,19.13a9.5,9.5,0,1,1,9.5-9.5A9.52,9.52,0,0,1,9.63,19.13ZM9.63.7a8.93,8.93,0,1,0,8.92,8.93A8.93,8.93,0,0,0,9.63.7Z"
+                />
+                <path
+                  d="M10.26,8.39s-.91,4.83-.91,4.91a.36.36,0,0,0,.08.23.27.27,0,0,0,.2.09.56.56,0,0,0,.32-.15,5.16,5.16,0,0,0,1-1.12l.3.2a6.09,6.09,0,0,1-1.4,1.54,1.9,1.9,0,0,1-1.14.47.84.84,0,0,1-.59-.22.68.68,0,0,1-.23-.54c0-.22.64-4.07.64-4.23a.41.41,0,0,0-.13-.32A.58.58,0,0,0,8,9.13a5.8,5.8,0,0,0-.8.1V8.88ZM10.15,4.9a.89.89,0,0,1,.88.88.88.88,0,0,1-1.76,0,.89.89,0,0,1,.88-.88Z"
+                />
+              </svg> О нас
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="/company.html?language=ru">
+                        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.5 20.5">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                      stroke: #5c5c5c;
+                      stroke-miterlimit: 10;
+                    }
+                  </style>
+                </defs>
+                <title>icn-companies</title>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <polygon
+                      class="cls-1"
+                      points="16 20 0.5 20 0.5 0.5 13.18 0.5 16 3.86 16 5.35 16 20"
+                    />
+                    <line class="cls-1" x1="3.08" y1="4.4" x2="6.7" y2="4.4" />
+                    <line
+                      class="cls-1"
+                      x1="3.08"
+                      y1="7.33"
+                      x2="11.35"
+                      y2="7.33"
+                    />
+                    <line
+                      class="cls-1"
+                      x1="3.08"
+                      y1="10.25"
+                      x2="13.93"
+                      y2="10.25"
+                    />
+                    <line
+                      class="cls-1"
+                      x1="3.08"
+                      y1="13.17"
+                      x2="11.35"
+                      y2="13.17"
+                    />
+                    <line
+                      class="cls-1"
+                      x1="8.25"
+                      y1="16.1"
+                      x2="13.42"
+                      y2="16.1"
+                    />
+                    <polyline
+                      class="cls-1"
+                      points="16 4.4 11.87 4.4 11.87 0.5"
+                    />
+                  </g>
+                </g>
+              </svg> Компаниям
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="/faq.html?language=ru"> Вопросы? </a>
+                </li>
+            </ul>
+        </section>
+    </header>
+
+    {% block content %} {% endblock %}
+
+
+
+    <footer>
+        <section class="food-footer">
+            <div class="food-footer--wrap">
+                <div class="food-footer--item">
+                    <div class="food-footer-item--title">Типы кухонь</div>
+                    <ul class="food-footer-menu">
+                        <li>
+                            <a href="/cafe/national?language=ru">Национальная</a>
+                        </li>
+                        <li>
+                            <a href="/cafe/european?language=ru">Европейская</a>
+                        </li>
+                        <li>
+                            <a href="/cafe/turkish?language=ru">Турецкая</a>
+                        </li>
+                        <li>
+                            <a href="/cafe/sushi?language=ru">Суши</a>
+                        </li>
+                        <li>
+                            <a href="/cafe/pizza?language=ru">Пицца</a>
+                        </li>
+                        <li>
+                            <a href="/cafe/desserts?language=ru">Десерты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="food-footer--item">
+                    <div class="food-footer-item--title">Популярные места</div>
+                    <ul class="food-footer-menu">
+                        <li><a href="/izum">ИZЮМ</a></li>
+                        <li><a href="/dolce-vita">Dolce Vita </a></li>
+                        <li><a href="/nirvana">Nirvana</a></li>
+                        <li><a href="/carskiy-dvor">Царский Двор</a></li>
+                        <li><a href="/dve-palochki">Две Палочки</a></li>
+                        <li><a href="/tokoch">Токоч</a></li>
+                    </ul>
+                </div>
+                <div class="food-footer--item">
+                    <div class="food-footer-item--title">Популярные блюда</div>
+                    <ul class="food-footer-menu">
+                        <li>
+                            <a href="/search?query=Плов&search-select=dish&language=ru">
+                Плов
+              </a>
+                        </li>
+                        <li>
+                            <a href="/search?query=Самсы&search-select=dish&language=ru">
+                Самсы
+              </a>
+                        </li>
+                        <li>
+                            <a href="/search?query=Маленькие Мантышки&search-select=dish&language=ru">
+                Маленькие Мантышки
+              </a>
+                        </li>
+                        <li>
+                            <a href="/search?query=Лагман&search-select=dish&language=ru">
+                Лагман
+              </a>
+                        </li>
+                        <li>
+                            <a href="/search?query=Роллы&search-select=dish&language=ru">
+                Роллы
+              </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="food-footer--item">
+                    <div class="food-footer-item--title">Прочее</div>
+                    <ul class="food-footer-menu">
+                        <li><a href="/faq.html?language=ru">Вопросы?</a></li>
+                        <li><a href="/about_us.html?language=ru">О нас</a></li>
+                        <li><a href="/contacts.html?language=ru">Контакты</a></li>
+                        <li><a href="/bonus?language=ru">Акции</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+    <script>
+        function redirectToLogin() {
+            window.location.href = "{% url 'loginPage:loginView' %}";
+        }
+        function profile() {
+            window.location.href = "{% url 'mainPage:profile' %}";
+        }
+    </script>
+    <script>
+        function Logout() {
+            window.location.href = "{% url 'mainPage:logout' %}";
+        }
+    </script>
+

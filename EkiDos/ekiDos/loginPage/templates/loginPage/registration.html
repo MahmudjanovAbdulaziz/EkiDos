@@ -1,0 +1,53 @@
+{% extends 'loginPage/base.html' %}
+{% load static %}
+
+	{% block content %}
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{% static 'images/img-01.png'%}" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" method="post" action="{% url 'loginPage:registerUser' %}">
+					{% csrf_token %}
+                    
+					<span class="login100-form-title">
+						Логин Участника
+					</span>
+					{% for f in form %}
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<!-- form.username  -->
+                        {{f}}               
+						<div class="input-errors">{{f.errors}}</div>         
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i> 
+							<!-- вот та эта хуйня под именем i отвечает за иконки -->
+						</span>
+					</div>
+					{% endfor %}
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<a class="txt2" href="{% url 'loginPage:loginView' %}">
+							Уже есть аккаунт? Войти в аккаунт.
+						</a>
+					</div>
+
+				</form>
+
+				
+
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}	
+
+	

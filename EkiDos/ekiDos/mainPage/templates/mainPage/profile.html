@@ -1,0 +1,75 @@
+{% extends 'mainPage/base.html' %}
+
+{% block content %}
+    <style>
+        .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.profile-btn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.profile-a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.profile-btn:hover, a:hover {
+    opacity: 0.7;
+}
+    </style>
+
+<h1>Профиль</h1>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+   {% if add_profile_attr.img %}
+  <img src="{{add_profile_attr.img.url}}" alt="Img" style="width:100%">
+  {% else %}
+    <a class='profile-a' href="{% url 'mainPage:add_profile' %}">Добавить Аватарку</a>
+    {% endif %}
+  <h1>Профиль</h1>
+  <p class="title">Example</p>
+  <p>Имя пользователя: {{user.username}}</p>
+   {% if add_profile_attr.first_name %}
+  <p>Имя: {{add_profile_attr.first_name}}</p>
+  {% else %}
+    <a class='profile-a' href="{% url 'mainPage:add_profile' %}">Имя: Добавить имя</a><br><br>
+{% endif %}
+   {% if add_profile_attr.last_name %}
+  <p>фамилия: {{add_profile_attr.last_name}}</p>
+  {% else %}
+    <a class='profile-a' href="{% url 'mainPage:add_profile' %}">Фамилия: Добавить Фамилию </a><br>
+{% endif %}
+
+
+  <p>Email аддрес: {{user.email}}</p>
+  <p><button class="profile-btn" onclick="Logout_to_main()">Contact</button></p>
+  
+</div>
+    <script>
+        function Logout_to_main() {
+            window.location.href = "{% url 'mainPage:index' %}";
+        }
+    </script>
+{% endblock %}

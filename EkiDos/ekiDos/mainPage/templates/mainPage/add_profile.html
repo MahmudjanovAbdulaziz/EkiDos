@@ -1,0 +1,19 @@
+
+    <h1>Добавить в профиль</h1>
+    <form action="{% url 'mainPage:add_profile' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="avatar">Выберите аватар:</label>
+        <input type="file" name="avatar" accept="image/*">
+        
+        <label for="first_name">Напишите свое имя:</label>
+        <input type="text" name="first_name">
+
+        <label for="last_name">Напишите свою фамилию:</label>
+        <input type="text" name="last_name">
+
+
+
+        <button type="submit">Загрузить</button>
+    </form>
+    <h1>Имя пользователя: {{user.username}}</h1>
+    <p>Email Аддрес: {{user.email}}</p>
